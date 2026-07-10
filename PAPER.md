@@ -16,11 +16,11 @@ Traditional agent frameworks (LangGraph, CrewAI, AutoGen) assume cloud connectiv
 ## 3. Performance
 - **Cold start**: <200ms (Cloudflare global edge)
 - **Bundle size**: 3-20KB gzipped
-- **Concurrent vessels**: 100+ on free tier
-- **Cost**: $0.0002 per 1K inferences (DeepSeek API)
+- **Free-tier throughput**: 100,000 requests/day (Cloudflare Workers free-tier limit); no fixed per-instance concurrency ceiling
+- **Cost**: 🔮 ~$0.06 per 1K requests at DeepSeek V4 Flash rates, assuming 250 input + 100 output tokens per request (published pricing: $0.14/1M input tokens, $0.28/1M output tokens; actual cost scales with token mix)
 
-## 4. Case Study: Marine Fleet
-Deployment of 10 fishing-log vessels on Alaska fishing boats: 99.9% uptime over 30 days, zero cloud dependencies, automatic recovery from satellite comms loss.
+## 4. Target Case Study: Marine Fleet 🔮
+Planned validation: deployment of 10 fishing-log vessels on Alaska fishing boats, targeting 99.9% uptime over 30 days with zero cloud dependencies and automatic recovery from satellite comms loss. This is a design goal; no telemetry data or methodology is present in this repo to verify the uptime figure as a measured result.
 
 ## 5. Comparison
 Outperforms container-based approaches (Docker, k8s) in cold start, cost, and sovereignty. Beats vector DB memory systems with git-native provenance.
