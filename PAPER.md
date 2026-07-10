@@ -16,7 +16,7 @@ Traditional agent frameworks (LangGraph, CrewAI, AutoGen) assume cloud connectiv
 ## 3. Performance
 - **Cold start**: <200ms (Cloudflare global edge)
 - **Bundle size**: 3-20KB gzipped
-- **Concurrent vessels**: 100+ on free tier
+- **Free-tier throughput**: 100,000 requests/day (Cloudflare Workers free-tier limit); no fixed per-instance concurrency ceiling
 - **Cost**: $0.0002 per 1K inferences (DeepSeek API)
 
 ## 4. Case Study: Marine Fleet
