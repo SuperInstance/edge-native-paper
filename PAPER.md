@@ -17,7 +17,7 @@ Traditional agent frameworks (LangGraph, CrewAI, AutoGen) assume cloud connectiv
 - **Cold start**: <200ms (Cloudflare global edge)
 - **Bundle size**: 3-20KB gzipped
 - **Free-tier throughput**: 100,000 requests/day (Cloudflare Workers free-tier limit); no fixed per-instance concurrency ceiling
-- **Cost**: $0.0002 per 1K inferences (DeepSeek API)
+- **Cost**: 🔮 ~$0.06 per 1K requests at DeepSeek V4 Flash rates, assuming 250 input + 100 output tokens per request (published pricing: $0.14/1M input tokens, $0.28/1M output tokens; actual cost scales with token mix)
 
 ## 4. Case Study: Marine Fleet
 Deployment of 10 fishing-log vessels on Alaska fishing boats: 99.9% uptime over 30 days, zero cloud dependencies, automatic recovery from satellite comms loss.
